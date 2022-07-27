@@ -1,0 +1,6 @@
+<p>Nombre del empleado: {{nombre}}</p>
+<p>Apellido del empleado: {{apellido}}</p>
+<p id="edadEmpleado">Edad del empleado: {{getEdad()>18?getEdad()+" Mayor de edad":getEdad()+" Menor de edad"}}</p>
+<input type="text" #nombreInput (keyup.enter)="mayorEdad(nombreInput.value)" placeholder="edad">
+
+<p>Empresa del empleado: {{empresa}}</p>
