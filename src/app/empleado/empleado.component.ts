@@ -12,10 +12,9 @@ export class EmpleadoComponent implements OnInit {
   nombre = "María José";
   apellido = "Aranguren"
   private edad=21;//solo accesible dentro de la clase
-  empresa="Stefanini";
   valueInputEdad:any;
 
-  getEdad(){
+  getEdad(){//getter
     return this.edad;
   }
 
@@ -39,4 +38,7 @@ export class EmpleadoComponent implements OnInit {
       pEdad?.appendChild(resultado);
     }
   }
+
+  establecerEmpresa(value:String){}
+  
 }

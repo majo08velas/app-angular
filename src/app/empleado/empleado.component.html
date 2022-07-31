@@ -2,5 +2,8 @@
 <p>Apellido del empleado: {{apellido}}</p>
 <p id="edadEmpleado">Edad del empleado: {{getEdad()>18?getEdad()+" Mayor de edad":getEdad()+" Menor de edad"}}</p>
 <input type="text" #nombreInput (keyup.enter)="mayorEdad(nombreInput.value)" placeholder="edad">
-
-<p>Empresa del empleado: {{empresa}}</p>
+<p>Empresa del empleado: {{empresa.value}}</p>
+<label>Introduce el nombre de la empresa: </label>
+<!--Se establece 0 solo para que se recargue solo la sección, no toda la página-->
+<input type="text" #empresa (keyup)="0">
+<button (click)="0">Click!</button>
