@@ -13,6 +13,10 @@ export class EmpleadoComponent implements OnInit {
   apellido = "Aranguren"
   private edad=21;//solo accesible dentro de la clase
   valueInputEdad:any;
+  habilitar=false;//propiedad para binding
+  registrado=false;//propiedad para binding 
+  textoDeRegistro="No hay nadie registrado";
+  correo = "majo08velas_@hotmail.com"
 
   getEdad(){//getter
     return this.edad;
@@ -40,5 +44,18 @@ export class EmpleadoComponent implements OnInit {
   }
 
   establecerEmpresa(value:String){}
-  
+
+  getRegistroUsuario(){
+    this.registrado=false;
+  }
+
+  nuevoUsuarioRegistrado(event:Event){
+   //this.textoDeRegistro="Usuario Registrado";
+   if ((<HTMLInputElement>event.target).value=="si") {//se hcae el cast para permitir el acceso a su propiedad value
+    this.textoDeRegistro="Usuario Registrado";
+   }else{
+    this.textoDeRegistro="Usuario no Registrado";
+   }
+  }
+
 }
